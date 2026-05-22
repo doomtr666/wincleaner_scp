@@ -8,7 +8,7 @@ A robust, developer-centric, and system-wide Windows diagnostic and cleanup util
 ---
 
 
-## 🚀 Features
+## Features
 
 The server implements **7 high-level tools** exposed to MCP-compatible LLM clients:
 
@@ -39,7 +39,7 @@ The server implements **7 high-level tools** exposed to MCP-compatible LLM clien
 
 ---
 
-## 🛡️ Safety & Heuristics
+## Safety & Heuristics
 
 To prevent accidental data loss in active developer environments, the server implements strict safety boundaries:
 1. **Protected Folders**: `scan_appdata_leftovers` explicitly ignores critical systems and development directories, including:
@@ -50,7 +50,7 @@ To prevent accidental data loss in active developer environments, the server imp
 
 ---
 
-## 💬 Prompting Guide (How to interact with it)
+## Prompting Guide (How to interact with it)
 
 LLM agents can use this MCP server autonomously when prompted with instructions like:
 
@@ -65,7 +65,7 @@ LLM agents can use this MCP server autonomously when prompted with instructions 
 
 ---
 
-## 🛠️ Build & Installation
+## Build & Installation
 
 ### Prerequisites
 * **Rust**: Ensure you have the Rust toolchain installed (edition 2024).
@@ -95,6 +95,6 @@ Add the server configuration to your MCP settings file (e.g., `mcp_config.json` 
 
 ---
 
-## 📄 License
+## License
 This project is licensed under the GNU General Public License v3.0 - see the [LICENSE](LICENSE) file for details.
 
