@@ -2,7 +2,11 @@
 
 A robust, developer-centric, and system-wide Windows diagnostic and cleanup utility running as a Model Context Protocol (MCP) server. Built in Rust, it allows LLM agents to safely scan, analyze, and optimize Windows systems by finding and cleaning developer caches, temp folders, user junk, AppData leftovers, and registry remnants.
 
+> [!WARNING]
+> **Experimental & Potentially Dangerous**: This project is highly experimental and primarily designed to test the Model Context Protocol (MCP). Since it grants file deletion and registry modification privileges to LLM agents, it is **potentially very dangerous**. Use with extreme caution and at your own risk!
+
 ---
+
 
 ## 🚀 Features
 
