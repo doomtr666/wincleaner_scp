@@ -1,4 +1,4 @@
-# WinCleaner SCP - Windows Cleanup MCP Server
+# WinCleaner MCP - Windows Cleanup MCP Server
 
 A robust, developer-centric, and system-wide Windows diagnostic and cleanup utility running as a Model Context Protocol (MCP) server. Built in Rust, it allows LLM agents to safely scan, analyze, and optimize Windows systems by finding and cleaning developer caches, temp folders, user junk, AppData leftovers, and registry remnants.
 
@@ -76,16 +76,36 @@ Clone the repository and build the binary:
 ```bash
 cargo build --release
 ```
-The compiled executable will be located at `target/release/mcp.exe`.
+The compiled executable will be located at `target/release/wincleaner_mcp.exe`.
+
+Alternatively, you can install the binary globally via Cargo:
+```bash
+cargo install --path .
+```
+This will install `wincleaner_mcp.exe` in your global Cargo binaries directory (typically `%USERPROFILE%\.cargo\bin`), which is normally added to your system PATH.
 
 ### Configuration in MCP Hosts
 Add the server configuration to your MCP settings file (e.g., `mcp_config.json` for Claude Desktop or other assistant hosts):
 
+Using target path:
 ```json
 {
   "mcpServers": {
-    "DiskAnalyzer": {
-      "command": "C:\\path\\to\\your\\wincleaner_scp\\target\\release\\mcp.exe",
+    "wincleaner_mcp": {
+      "command": "C:\\path\\to\\your\\wincleaner_mcp\\target\\release\\wincleaner_mcp.exe",
+      "args": [],
+      "env": {}
+    }
+  }
+}
+```
+
+Or using the globally installed cargo binary:
+```json
+{
+  "mcpServers": {
+    "wincleaner_mcp": {
+      "command": "wincleaner_mcp",
       "args": [],
       "env": {}
     }
